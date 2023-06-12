@@ -17,7 +17,7 @@ const CartCount = styled.div`
 `;
 
 export function CartControl() {
-  const { value } = useLocalStorage('cart-items');
+  const { value } = useLocalStorage('cart-items', []);
 
   if (value === null || typeof value === 'undefined') {
     return null;
